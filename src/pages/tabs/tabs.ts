@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
-import { TransactionPage } from '../transaction/transaction';
+import { TransactPage } from '../transact/transact';
 import { ProfilePage } from '../profile/profile';
 
 @IonicPage()
@@ -13,7 +13,7 @@ import { ProfilePage } from '../profile/profile';
 export class TabsPage {
 
     tab1Root = HomePage;
-    tab2Root = TransactionPage;
+    tab2Root = TransactPage;
     tab3Root = ProfilePage;
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Local Coin
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-12 text-center>
+                <button class="transact-button" ion-button full (click)="openFastTransactionModal()">
+                    Fast Transaction
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+<ion-footer padding no-border>
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-12 text-center>
+                <button class="transact-button" ion-button full (click)="openManualTransactionModal()">
+                    Manual Transaction
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

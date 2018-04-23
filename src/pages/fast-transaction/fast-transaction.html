@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar mode="ios">
+        <ion-buttons start class="nav-buttons" id="first">
+            <button ion-button icon-only (click)="back()">
+                <ion-icon name="arrow-back"></ion-icon>
+                <span id="cancel">
+                    Cancel
+                </span>
+            </button>
+        </ion-buttons>
+        <ion-title>New Transaction</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding no-bounce>
+    <ion-item id="amount-input" no-padding>
+        <ion-label color="primary">Amount</ion-label>
+        <ion-input [(ngModel)]="amount"></ion-input>
+    </ion-item>
+</ion-content>
+
+<ion-footer id="add-group-footer" padding no-border>
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-12 text-center>
+                <button id="send-button" ion-button full (click)="send()">
+                    Begin Transaction
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

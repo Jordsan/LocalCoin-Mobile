@@ -8,32 +8,38 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
-import { TransactionPage } from '../pages/transaction/transaction';
+import { TransactPage } from '../pages/transact/transact';
+import { ManualTransactionPage } from '../pages/manual-transaction/manual-transaction';
+import { FastTransactionPage } from '../pages/fast-transaction/fast-transaction';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    TabsPage,
-    HomePage,
-    TransactionPage,
-    ProfilePage
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    TabsPage,
-    HomePage,
-    ProfilePage,
-    TransactionPage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    declarations: [
+        MyApp,
+        TabsPage,
+        HomePage,
+        TransactPage,
+        ProfilePage,
+        ManualTransactionPage,
+        FastTransactionPage
+    ],
+    imports: [
+        BrowserModule,
+        IonicModule.forRoot(MyApp)
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        TabsPage,
+        HomePage,
+        ProfilePage,
+        TransactPage,
+        ManualTransactionPage,
+        FastTransactionPage
+    ],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: ErrorHandler, useClass: IonicErrorHandler }
+    ]
 })
-export class AppModule {}
+export class AppModule { }
