@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 import { UserProvider } from '../../providers/user/user';
 
 @IonicPage()
@@ -12,11 +13,11 @@ export class ProfilePage {
     constructor(public navCtrl: NavController, public navParams: NavParams, public userProvider: UserProvider) {
     }
 
-    getBalance(): number{
-        return this.userProvider.getBalance();
+    getBalance() {
+        return this.userProvider.balance;
     }
-    
+
     getWalletAddress(): string {
-        return 'asdf';
+        return this.userProvider.currUser;
     }
 }
