@@ -1,4 +1,4 @@
-page-manual-transaction {
+page-transaction {
     .nav-buttons {
         margin: auto;
     }
@@ -10,5 +10,9 @@ page-manual-transaction {
     }
     #send-button {
         border-radius: 15px;
+    }
+
+    #hint-text {
+        margin-top: 50px;
     }
 }

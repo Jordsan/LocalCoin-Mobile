@@ -14,14 +14,17 @@
 
 
 <ion-content padding no-bounce>
-    <ion-item id="toAddress-input" no-padding>
-        <ion-label color="primary">To</ion-label>
-        <ion-input [(ngModel)]="toAddress"></ion-input>
-    </ion-item>
     <ion-item id="amount-input" no-padding>
         <ion-label color="primary">Amount</ion-label>
         <ion-input [(ngModel)]="amount"></ion-input>
     </ion-item>
+    <ion-item id="toAddress-input" no-padding>
+        <ion-label color="primary">To</ion-label>
+        <ion-input [(ngModel)]="toAddress"></ion-input>
+    </ion-item>
+    <div text-center id="hint-text">
+        Manually enter To Wallet Address or use NFC to automatically detect recipient
+    </div>
 </ion-content>
 
 <ion-footer id="add-group-footer" padding no-border>

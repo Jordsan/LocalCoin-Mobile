@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { HomePage } from '../home/home';
-import { TransactPage } from '../transact/transact';
 import { ProfilePage } from '../profile/profile';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -13,8 +12,7 @@ import { ProfilePage } from '../profile/profile';
 export class TabsPage {
 
     tab1Root = HomePage;
-    tab2Root = TransactPage;
-    tab3Root = ProfilePage;
+    tab2Root = ProfilePage;
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
     }

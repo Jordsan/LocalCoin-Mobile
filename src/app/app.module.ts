@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -8,22 +9,25 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
-import { TransactPage } from '../pages/transact/transact';
-import { ManualTransactionPage } from '../pages/manual-transaction/manual-transaction';
-import { FastTransactionPage } from '../pages/fast-transaction/fast-transaction';
+
+import { TransactionPage } from '../pages/transaction/transaction';
+
+import { TransactionProvider } from '../providers/transaction/transaction';
+import { UserProvider } from '../providers/user/user';
+
+
 
 @NgModule({
     declarations: [
         MyApp,
         TabsPage,
         HomePage,
-        TransactPage,
         ProfilePage,
-        ManualTransactionPage,
-        FastTransactionPage
+        TransactionPage
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         IonicModule.forRoot(MyApp)
     ],
     bootstrap: [IonicApp],
@@ -32,14 +36,15 @@ import { FastTransactionPage } from '../pages/fast-transaction/fast-transaction'
         TabsPage,
         HomePage,
         ProfilePage,
-        TransactPage,
-        ManualTransactionPage,
-        FastTransactionPage
+        TransactionPage
     ],
     providers: [
         StatusBar,
         SplashScreen,
-        { provide: ErrorHandler, useClass: IonicErrorHandler }
+        TransactionProvider,
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+    TransactionProvider,
+    UserProvider
     ]
 })
 export class AppModule { }
