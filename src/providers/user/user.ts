@@ -7,7 +7,7 @@ export class UserProvider {
     currUser: string;
     balance: number;
 
-    apiURL: string = 'http://192.168.56.106:4200/api/';
+    apiURL: string = 'http://localhost:3000/api/';
 
     httpOptions = {
         headers: new HttpHeaders({
@@ -24,13 +24,13 @@ export class UserProvider {
     }
 
     getBalance() {
-        this.http.get(this.apiURL + `wallet/${this.getCurrUser()}`, this.httpOptions)
+        this.http.get(this.apiURL + `wallets/${this.getCurrUser()}`, this.httpOptions)
             .subscribe(
                 (res: HttpResponse<any>) => {
                     this.balance = res['balance'];
                 },
                 (error: HttpErrorResponse) => {
-                    this.balance = -1;
+                    this.balance = 0;
                 }
             );
     }

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TransactionProvider {
 
-    apiURL: string = 'http://192.168.56.106:4200/api/';
+    apiURL: string = 'http://localhost:3000/api/';
 
 
     httpOptions = {
@@ -17,7 +17,7 @@ export class TransactionProvider {
     }
 
     sendTransaction(data: any) {
-        this.http.post(this.apiURL + 'chain', JSON.stringify(data), this.httpOptions)
+        this.http.post(this.apiURL + 'transactions', JSON.stringify(data), this.httpOptions)
             .subscribe(
                 (res: HttpResponse<any>) => {
                     if (res['transaction'] === 'success') {
