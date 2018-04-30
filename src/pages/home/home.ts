@@ -26,7 +26,6 @@ export class HomePage {
 
     send(data: any): void {
         if (data !== undefined) {
-            console.log("data", data);
             this.transactionProvider.sendTransaction(data);
         }
     }

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TransactionProvider {
 
-    apiURL: string = 'http://localhost:3000/api/';
+    apiURL: string = 'https://local-coin.firebaseapp.com/api/';
 
 
     httpOptions = {
