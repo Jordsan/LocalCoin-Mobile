@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { NFC, Ndef } from '@ionic-native/nfc';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -41,6 +43,8 @@ import { UserProvider } from '../providers/user/user';
     providers: [
         StatusBar,
         SplashScreen,
+        NFC,
+        Ndef,
         TransactionProvider,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
     TransactionProvider,
