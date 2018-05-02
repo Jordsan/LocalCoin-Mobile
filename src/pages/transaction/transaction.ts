@@ -28,7 +28,9 @@ export class TransactionPage {
 
         this.nfc.enabled().then(() => {
             let message = [
-                this.ndef.textRecord(this.userProvider.getCurrUser(), 'English', [])
+                // this.ndef.textRecord(this.userProvider.getCurrUser(), 'English', [])
+                this.ndef.textRecord('test2', 'English', [])
+
             ];
             this.nfc.share([message]).then(() => {
                 console.log('share success');
